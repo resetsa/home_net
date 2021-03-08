@@ -1,0 +1,8 @@
+Value username (\S*)
+Value level (\S*)
+Value disabled (yes|no)
+Value address (\S+)
+
+Start
+  ^/user
+  ^add address=${address} disabled=${disabled} group=${level} name=${username} -> Record

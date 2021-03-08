@@ -1,0 +1,18 @@
+Value routerboard (yes|no)
+Value boardname (.*)
+Value model (\S+)
+Value serialnumber (\S+)
+Value firmwaretype (\S+)
+Value factoryfirmware (\S+)
+Value currentfirmware (\S+)
+Value upgradefirmware (\S+)
+
+Start
+  ^\s+routerboard:\s${routerboard}
+  ^\s+board-name:\s${boardname}
+  ^\s+model:\s${model}
+  ^\s+serial-number:\s${serialnumber}
+  ^\s+firmware-type:\s${firmwaretype}
+  ^\s+factory-firmware:\s${factoryfirmware}
+  ^\s+current-firmware:\s${currentfirmware}
+  ^\s+upgrade-firmware:\s${upgradefirmware} -> Record

@@ -1,0 +1,21 @@
+Value model (.*)
+Value cpumac (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Value vlanmac (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Value version (.*)
+Value bootrom (.*)
+Value hwversion (.*)
+Value serial (\d+)
+Value uptime_w (\d+)
+Value uptime_d (\d+)
+Value uptime_h (\d+)
+Value uptime_m (\d+)
+
+Start
+  ^\s+Device:\s+${model},
+  ^\s+CPU MAC\s+${cpumac}
+  ^\s+VLAN MAC\s+${vlanmac}
+  ^\s+SoftWare Version\s+${version}
+  ^\s+BootRom Version\s+${bootrom}
+  ^\s+HardWare Version\s+${hwversion}
+  ^\s+Serial No\.:${serial}
+  ^\s+Uptime is ${uptime_w} weeks, ${uptime_d} days, ${uptime_h} hours, ${uptime_m} minutes -> Record

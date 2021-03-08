@@ -1,0 +1,8 @@
+Value username (.*)
+Value class (.*)
+Value password (.*)
+
+Start
+  ^user\s${username}\s
+  ^\s+class\s${class};
+  ^\s+encrypted-password\s"${password}" -> Record

@@ -1,0 +1,26 @@
+Value uptime ((\d+[dhms]){1,4})
+Value version (\d+\.\d+\.\d+)
+Value freememory (\d+\.\d+)
+Value totalmemory (\d+\.\d+)
+Value cpu (.*)
+Value cpucount (\d)
+Value cpufreq (\d+)
+Value cpuloadprc (\d+)
+Value freehddspace (\d+\.\d+)
+Value arch (.*)
+Value model (.*)
+Value platform (.*)
+
+Start
+  ^\s+uptime:\s${uptime}
+  ^\s+version:\s${version}\s.*
+  ^\s+free-memory:\s${freememory}MiB
+  ^\s+total-memory:\s${totalmemory}MiB
+  ^\s+cpu:\s${cpu}
+  ^\s+cpu-count:\s${cpucount}
+  ^\s+cpu-frequency:\s${cpufreq}MHz
+  ^\s+cpu-load:\s${cpuloadprc}%
+  ^\s+free-hdd-space:\s${freehddspace}MiB
+  ^\s+architecture-name:\s${arch}
+  ^\s+board-name:\s${model}
+  ^\s+platform:\s${platform} -> Record

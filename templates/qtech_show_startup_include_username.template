@@ -1,0 +1,6 @@
+Value username (\S+)
+Value level (\d+)
+Value password (\S+)
+
+Start
+  ^username ${username} privilege ${level} password \d+ ${password} -> Record

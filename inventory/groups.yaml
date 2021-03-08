@@ -1,0 +1,49 @@
+---
+routeros:
+  platform: mikrotik_routeros
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 2
+        global_delay_factor: 2
+        banner_timeout: 15
+        global_cmd_verify: False
+    paramiko:
+      port: 22
+    napalm:
+      platform: ros
+  data:
+    reboot_last: False
+
+qtech:
+  platform: cisco_ios
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 2
+        global_delay_factor: 2
+        banner_timeout: 15
+        global_cmd_verify: False
+
+
+ios:
+  platform: cisco_ios
+  connection_options:
+    netmiko:
+      extras:
+        timeout: 5
+        device_type: 'cisco_ios_ssh'
+    napalm:
+      platform: ios
+      extras:
+        optional_args:
+          transport: ssh
+
+jun_srx:
+  platform: juniper_junos
+  connection_options:
+    napalm:
+      platform: junos
+    netmiko:
+      extras:
+        timeout: 5

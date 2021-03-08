@@ -1,0 +1,8 @@
+__pycache__
+private/
+output/
+config/
+test/
+routeros_package/
+nornir.log
+inventory/creds.yaml

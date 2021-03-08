@@ -1,0 +1,7 @@
+Value name (\S+)
+Value version (\S+)
+Value buildtime (\w{3}/\d+/\d{4}\s\d+:\d+:\d+)
+Value scheduled (\S*)
+
+Start
+  ^(\s)?\d+\s+name=${name} version=${version} build-time=${buildtime} scheduled="${scheduled}" -> Record

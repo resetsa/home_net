@@ -1,0 +1,74 @@
+---
+sw-core:
+  hostname: 192.168.254.1
+  groups:
+    - routeros
+  data:
+    role:
+      - switch
+    reboot_last: True
+
+rt-ext:
+  hostname: 192.168.254.2
+  groups:
+    - routeros
+  data:
+    role:
+      - router
+
+rt-vm:
+  hostname: 192.168.254.3
+  groups:
+    - routeros
+  data:
+    role:
+      - router
+
+rt-z-01:
+  hostname: 192.168.254.4
+  groups:
+    - routeros
+  data:
+    role:
+      - router
+
+rt-con-01:
+  hostname: 192.168.254.5
+  groups:
+    - routeros
+  data:
+    role:
+      - router
+
+sw-access:
+  hostname: 192.168.254.7
+  groups:
+    - ios
+  data:
+    role:
+      - router
+
+
+rt-core-02:
+  hostname: 192.168.254.8
+  groups:
+    - routeros
+  data:
+    role:
+      - router
+
+sw-qtech:
+  hostname: 192.168.254.10
+  groups:
+    - qtech
+  data:
+    role:
+      - switch
+
+jun-srx100:
+  hostname: 192.168.254.11
+  groups:
+    - jun_srx
+  data:
+    role:
+      - fw
